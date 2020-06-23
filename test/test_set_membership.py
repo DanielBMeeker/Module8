@@ -15,10 +15,10 @@ value_not_in_set = 6
 
 class MyTestCase(unittest.TestCase):
     def test_value_in_set(self):
-        self.assertEqual(True, sm.in_set(a_set, value_in_set))
+        self.assertTrue(sm.in_set(a_set, value_in_set))
 
     def test_value_not_in_set(self):
-        self.assertEqual(False, sm.in_set(a_set, value_not_in_set))
+        self.assertFalse(sm.in_set(a_set, value_not_in_set))
 
 
 if __name__ == '__main__':
