@@ -26,8 +26,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(0, aa.switch_average(a_dict, 'f'))
 
     def test_switch_average_non_key(self):
-        self.assertRaises(ValueError)
-        aa.switch_average(a_dict, 'S')
+        with self.assertRaises(ValueError):
+            aa.switch_average(a_dict, 'S')
 
 
 if __name__ == '__main__':
