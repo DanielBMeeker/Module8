@@ -18,3 +18,5 @@ def switch_average(a_dict, key):
         return a_dict.get(str(key).capitalize())
     elif str(key).capitalize() == 'D':
         return a_dict.get(str(key).capitalize())
+    elif str(key).capitalize() == 'F':
+        return a_dict.get(str(key).capitalize())
