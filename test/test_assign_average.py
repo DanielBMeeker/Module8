@@ -1,33 +1,40 @@
+"""
+Program: test_assign_average.py
+Author: Daniel Meeker
+Date: 6/27/2020
+
+This program defines a switch_average function that emulates
+the case statement of other languages using a dictionary. This
+file tests the function.
+"""
 import unittest
 from more_fun_with_collections import assign_average as aa
-
-a_dict = {'A': 90, 'B': 80, 'C': 70, 'D': 60, 'F': 0}
 
 
 class MyTestCase(unittest.TestCase):
     def test_switch_average_A(self):
-        self.assertEqual(90, aa.switch_average(a_dict, 'A'))
-        self.assertEqual(90, aa.switch_average(a_dict, 'a'))
+        self.assertEqual(90, aa.switch_average('A'))
+        self.assertEqual(90, aa.switch_average('a'))
 
     def test_switch_average_B(self):
-        self.assertEqual(80, aa.switch_average(a_dict, 'B'))
-        self.assertEqual(80, aa.switch_average(a_dict, 'b'))
+        self.assertEqual(80, aa.switch_average('B'))
+        self.assertEqual(80, aa.switch_average('b'))
 
     def test_switch_average_C(self):
-        self.assertEqual(70, aa.switch_average(a_dict, 'C'))
-        self.assertEqual(70, aa.switch_average(a_dict, 'c'))
+        self.assertEqual(70, aa.switch_average('C'))
+        self.assertEqual(70, aa.switch_average('c'))
 
     def test_switch_average_D(self):
-        self.assertEqual(60, aa.switch_average(a_dict, 'D'))
-        self.assertEqual(60, aa.switch_average(a_dict, 'd'))
+        self.assertEqual(60, aa.switch_average('D'))
+        self.assertEqual(60, aa.switch_average('d'))
 
     def test_switch_average_F(self):
-        self.assertEqual(0, aa.switch_average(a_dict, 'F'))
-        self.assertEqual(0, aa.switch_average(a_dict, 'f'))
+        self.assertEqual(0, aa.switch_average('F'))
+        self.assertEqual(0, aa.switch_average('f'))
 
     def test_switch_average_non_key(self):
         with self.assertRaises(ValueError):
-            aa.switch_average(a_dict, 'S')
+            aa.switch_average('S')
 
 
 if __name__ == '__main__':
